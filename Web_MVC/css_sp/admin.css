@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background: gainsboro;
+}
+
+/* header */
+#header {
+    margin-top: 5px;
+}
+#header h2 {
+    text-align: center;
+}
+#header ul{
+    float: right;
+    position: relative;
+    margin-top: -40px;
+    margin-right: 10px;
+}
+#user {
+    font-size: 18px;
+    color: green;
+}
+#dangxuat {
+    margin-top: -5px;
+    margin-left: 10px;
+}
+#dangxuat a {
+    font-size: 15px;
+    color: black;
+}
+#header ul {
+    list-style: none;
+}
+
+/* menu */
+#menu {
+    margin-top: 50px;
+    position: relative;
+    margin-left: 20px;
+}
+#menu button {
+    border: none;
+    font-size: 20px;
+}
+#menu button:hover {
+    color: green;
+}
+
+/* nội dung */
+
+.nguoidung {
+    width: 850px;
+    height: 1000px;
+    background-color: white;
+    position: absolute;
+    margin-left: 20%;
+    margin-top: -70px;
+}
+.nguoidung table {
+    width: 750px;
+    margin-left: 50px;
+}
+.baidang {
+    width: 850px;
+    height: 1000px;
+    background-color: white;
+    position: absolute;
+    margin-left: 20%;
+    margin-top: -70px
+}
+#cv {
+    width: 300px;
+}
+#vitrituyen {
+    font-size: 20px;
+    color: #000000;
+}
+#vitrituyen:hover {
+    color: green;
+}
+
+.nguoidung, .baidang {
+    display: none;
+}

@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background: gainsboro;
+}
+
+/*==Header==*/
+
+.header {
+    padding: 5px;
+}
+.header .row div a, #khuvuc{
+    font-size: 20px;
+    color: #333;
+}
+.header .row div a:hover, #khuvuc:hover {
+    color: green;
+}
+.header .row div {
+    text-align: center;
+    padding: 5px;
+    height: 55px;
+}
+#logo a{
+    font-size: 25px;
+}
+#dangxuat {
+    margin-top: -5px;
+    margin-left: 10px;
+}
+#dangxuat a {
+    font-size: 15px;
+}
+#dangnhap ul {
+    list-style: none;
+}
+
+/*==Banner==*/
+
+.banner {
+    background-image: url(../img/banner_01_new.png);
+    width: 100%;
+    height: 420px;
+}
+#timkiem {
+    position: absolute;
+    margin-left: 15%;
+    margin-top: 100px;
+    width: 70%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#btsearch {
+    width: 150px;
+    height: 30%;
+    position: absolute;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    margin-left: 40%;
+    margin-top: 55px;
+    text-align: center;
+    padding: 10px;
+}
+#btsearch:hover {
+    background-color: #33CC00;
+}
+/*==Nội dung==*/
+.container {
+    padding: 5px;
+    height: 1000px;
+    background-color: white;
+}
+.container h2 {
+    text-align: center;
+}
+#cv {
+    width: 500px;
+}
+#vitrituyen {
+    font-size: 25px;
+    color: #000000;
+}
+#vitrituyen:hover {
+    color: green;
+}
+#quantam {
+    width: 100px;
+}
+#iconqt {
+    text-align: center;
+}
+#iconqt a{
+    font-size: 30px;
+    color: red;
+}
+
+/*==footer==*/
+.footer .container-fluid{
+    height: 300px;
+    background-color: gainsboro;
+}
+.footer h2 {
+    text-align: center;
+    padding: 20px;
+    background-color: green;
+    height: 50px;
+    padding: 5px;
+    color: black;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.footer .row {
+    border-bottom: 1px solid white;
+    text-align: center;
+}
