@@ -79,7 +79,8 @@ body {
 .container {
     padding: 5px;
     height: 1000px;
-    background-color: white;
+    background-color: gainsboro;
+    overflow: auto;
 }
 .container h2 {
     text-align: center;
@@ -87,6 +88,7 @@ body {
 #vitrituyen {
     font-size: 25px;
     color: #000000;
+    font-weight: bold;
 }
 #vitrituyen:hover {
     color: green;

@@ -41,38 +41,37 @@ body {
 #menu {
     margin-top: 50px;
     position: relative;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 #menu button {
-    border: none;
+   margin-top: 10px;
     font-size: 20px;
+    width: 150px;
+}
+#menu li {
+    list-style: none;
 }
 #menu button:hover {
     color: green;
 }
 
 /* nội dung */
-
-.nguoidung {
-    width: 850px;
-    height: 1000px;
-    background-color: white;
-    /* position: absolute; */
+.khung {
+    width: 900px;
+    height: 500px;
+    background-color: gainsboro;
+    position: absolute;
     margin-left: 20%;
-    margin-top: -70px;
+    margin-top: -100px;
+    overflow: auto;
+   
 }
+
 .nguoidung table {
     width: 750px;
     margin-left: 50px;
 }
-.baidang {
-    width: 850px;
-    height: 1000px;
-    background-color: white;
-    /* position: absolute; */
-    margin-left: 200px  ;
-    margin-top: -70px
-}
+
 #cv {
     width: 300px;
 }
@@ -84,6 +83,6 @@ body {
     color: green;
 }
 
-.baidang {
+.baidang{
     display: none;
 }

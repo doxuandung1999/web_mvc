@@ -3,7 +3,7 @@
     <head>
         <title>Tuyển dụng</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="./css_sp/tuyendung.css" type="text/css">
+        <link rel="stylesheet" href="./css_sp/tuyendung_1.css" type="text/css">
         <link rel="stylesheet" type="text/css" href="./css_out/fontawesome-free-5.11.2-web/css/all.min.css"> 
         <link rel="stylesheet" type="text/css" href="./css_out/bootstrap.min.css"> 
     </head>
@@ -47,7 +47,7 @@
                                 <a href="#" id="sub_icon"><i class="far fa-user"></i>  <span><?php echo $hoTen ?></span></a>
                             </li>
                             <li id="dangxuat">
-                                <a href="index.php?controller=actor&action=login"><i class="fas fa-sign-out-alt"></i>  Đăng xuất</a>
+                                <a href="index.php?controller=job&action=dangtuyen&ac=logout"><i class="fas fa-sign-out-alt"></i>  Đăng xuất</a>
                             </li>
                         </ul>
                     </div>

@@ -3,7 +3,7 @@
     <head>
         <title>Tìm kiếm</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="./css_sp/timkiem.css" type="text/css">
+        <link rel="stylesheet" href="./css_sp/timkiem_1.css" type="text/css">
         <link rel="stylesheet" type="text/css" href="./css_out/fontawesome-free-5.11.2-web/css/all.min.css"> 
         <link rel="stylesheet" type="text/css" href="./css_out/bootstrap.min.css"> 
     </head>
@@ -41,10 +41,10 @@
                     <div class="col-sm-0" id="dangnhap">
                         <ul>
                             <li>
-                                <a href="#" id="sub_icon"><i class="far fa-user"></i>  <span>Lò Văn Chọi</span></a>
+                                <a href="#" id="sub_icon"><i class="far fa-user"></i>  <span><?php echo $hoTen ?></span></a>
                             </li>
                             <li id="dangxuat">
-                                <a href="index.php?controller=actor&action=login"><i class="fas fa-sign-out-alt"></i>  Đăng xuất</a>
+                                <a href="index.php?controller=job&action=timkiem&ac=logout"><i class="fas fa-sign-out-alt"></i>  Đăng xuất</a>
                             </li>
                         </ul>
                     </div>
@@ -54,6 +54,7 @@
 
        <!-- banner -->
        <div class="banner">
+           <form action="" method ='POST'>
             <div id="timkiem">
                 <input type="text" name = "tenCv" placeholder="Nhập tên công việc..." id="txtsearch">
                 <select name="nganhTuyen" id="">
@@ -113,11 +114,13 @@
                 </select>
                 <input type="submit" name="timKiem" value="Tìm kiếm" id="btsearch">
             </div>
+</form>
        </div>
 
        <!-- nội dung -->
        <div class="container">
            <h2>Kết quả tìm kiếm</h2>
+           <form action="" method = 'POST'>
            <table class="table table-hover">
                 <thead>
                     <tr>
@@ -129,24 +132,32 @@
                     </tr>
                 </thead>
                 <tbody>
+                            <?php
+                                while($array = $query->fetch_array()):
+                                
+                            ?>
                     <tr>
                         <td>
-                            <a href="chitietcv.html" id="vitrituyen">Vị trí tuyển dụng</a>
+                            <a href="index.php?controller=job&action=chitietcv&chitiet=<?php echo $array["id_cv"]?>" id="vitrituyen"><?php echo $array["viTriTuyenDung"];?></a>
                             <p>tên công ty</p>
                         </td>
                         <td>
-                            <span><i class="fas fa-dollar-sign"></i>  12-20tr</span>
+                            <span><i class="fas fa-dollar-sign"></i>  <?php echo $array["luong"]; ?></span>
                         </td>
                         <td>
-                            <span><i class="fas fa-map-marker-alt"></i>  Hà Nội</span>
+                            <span><i class="fas fa-map-marker-alt"></i>  <?php echo $array["khuVuc"]; ?></span>
                         </td>
-                        <td><i class="far fa-clock"></i>  20/12/2019</td>
+                        <td><i class="far fa-clock"></i>  <?php echo $array["hanNopHs"]; ?></td>
                         <td id="iconqt">
-                            <a href="" style=>❤</a>
+                            <a href="index.php?controller=job&action=timkiem&add=<?php echo $array["id_cv"];?>" style=>❤</a>
                         </td>
                     </tr>
+                            <?php
+                                endwhile;
+                            ?>
                 </tbody>
            </table>
+           </form>
        </div>
 
        <!-- footer -->

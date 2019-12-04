@@ -39,7 +39,6 @@ body {
     list-style: none;
 }
 
-
 /*==Banner==*/
 
 .banner {
@@ -74,12 +73,15 @@ body {
 #btsearch:hover {
     background-color: #33CC00;
 }
-
 /*==Nội dung==*/
 .container {
     padding: 5px;
     height: 1000px;
-    background-color: white;
+    background-color: gainsboro;
+    overflow: auto;
+}
+.container h2 {
+    text-align: center;
 }
 #cv {
     width: 500px;
@@ -87,19 +89,34 @@ body {
 #vitrituyen {
     font-size: 25px;
     color: #000000;
+    font-weight: bold;
 }
 #vitrituyen:hover {
     color: green;
 }
-#h2 {
+#quantam {
+    width: 100px;
+}
+#iconqt {
     text-align: center;
+}
+#iconqt a{
+    font-size: 30px;
+    color: red;
+}
+.xuliajax{
+    color: red;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    background-color:none;
+    background: none;
 }
 
 /*==footer==*/
-.footer .container{
+.footer .container-fluid{
     height: 300px;
-    background-color: gainsboro;
-    margin-top: 0px;
+    background-color: white;
 }
 .footer h2 {
     text-align: center;

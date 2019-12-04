@@ -39,6 +39,7 @@ body {
     list-style: none;
 }
 
+
 /*==Banner==*/
 
 .banner {
@@ -46,67 +47,57 @@ body {
     width: 100%;
     height: 420px;
 }
-#timkiem {
-    position: absolute;
-    margin-left: 15%;
-    margin-top: 100px;
-    width: 70%;
-    height: 30%;
-    background-color: rgba(0, 0, 0, 0.5);
+
+/*==Nội dung==*/
+.noidung {
+    padding: 5px;
+    height: 1250px;
+    background-color: gainsboro;
+    margin-top: 20px;
 }
-#btsearch {
-    width: 150px;
-    height: 30%;
-    position: absolute;
+.noidung .row {
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 100px;
+}
+.noidung input, .noidung select {
+    height: 40px;
+    width: 700px;
+    margin-left: 20px;
+    border-radius: 3px;
+    padding: 5px;
+}
+.noidung input:hover, .noidung select:hover, .noidung textarea:hover {
+    border: 1px solid green;
+}
+.noidung textarea {
+    width: 700px;
+    height: 100px;
+    margin-left: 20px;
+    border-radius: 3px;
+    padding: 5px;
+}
+#submit input{
     background-color: green;
     color: white;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    border-radius: 2px;
-    margin-left: 40%;
-    margin-top: 55px;
-    text-align: center;
-    padding: 10px;
-}
-#btsearch:hover {
-    background-color: #33CC00;
-}
-/*==Nội dung==*/
-.container {
-    padding: 5px;
-    height: 1000px;
-    background-color: white;
-}
-.container h2 {
-    text-align: center;
-}
-#cv {
-    width: 500px;
-}
-#vitrituyen {
     font-size: 25px;
-    color: #000000;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+    height: 50px;
+    margin-top: 10px;
 }
-#vitrituyen:hover {
-    color: green;
-}
-#quantam {
-    width: 100px;
-}
-#iconqt {
-    text-align: center;
-}
-#iconqt a{
-    font-size: 30px;
-    color: red;
+#submit input:hover {
+    background-color: darkgreen;
 }
 
+
 /*==footer==*/
-.footer .container-fluid{
+.footer .container{
     height: 300px;
     background-color: gainsboro;
+    text-align: center;
+    margin-top: 0px;
 }
 .footer h2 {
     text-align: center;

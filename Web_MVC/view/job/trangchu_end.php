@@ -4,7 +4,7 @@
         <title>Trang chủ</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="../css/fontawesome-free-5.11.2-web/css/all.min.css">
-        <link rel="stylesheet" href="./css_sp/trangchu_end.css" type="text/css">
+        <link rel="stylesheet" href="./css_sp/trangchu_1.css" type="text/css">
         <link rel="stylesheet" type="text/css" href="./css_out/fontawesome-free-5.11.2-web/css/all.min.css"> 
         <link rel="stylesheet" type="text/css" href="./css_out/bootstrap.min.css"> 
         
@@ -46,7 +46,7 @@
                                 <a href="#" id="sub_icon"><i class="far fa-user"></i>  <span><?php echo $hoTen ?></span></a>
                             </li>
                             <li id="dangxuat">
-                                <a href="index.php?controller=actor&action=login"><i class="fas fa-sign-out-alt"></i>  Đăng xuất</a>
+                                <a href="index.php?controller=job&action=home&ac=logout"><i class="fas fa-sign-out-alt"></i>  Đăng xuất</a>
                             </li>
                         </ul>
                     </div>
@@ -82,7 +82,7 @@
                             ?>
                     <tr>
                         <td>
-                            <a href="index.php?controller=job&action=chitietcv?chitiet=<?php echo $array["id_cv"]?>" id="vitrituyen"><?php echo $array["viTriTuyenDung"];?></a>
+                            <a href="index.php?controller=job&action=chitietcv&chitiet=<?php echo $array["id_cv"]?>" id="vitrituyen"><?php echo $array["viTriTuyenDung"];?></a>
                             <p><?php echo $array["tenCty"];?></p>
                         </td>
                         <td>
@@ -93,8 +93,9 @@
                         </td>
                         <td><i class="far fa-clock"></i>  <?php echo $array["hanNopHs"]; ?></td>
                         <td id="iconqt">
-                            <a href="index.php?controller=job&action=home?add=<?php echo $array["id_cv"];?>">❤</a>
+                            <a href="index.php?controller=job&action=home&add=<?php echo $array["id_cv"];?>">❤</a>
                         </td>
+                       
                     </tr>
                              <?php
                                 endwhile;
@@ -137,5 +138,6 @@
                 </div>
             </div>
         </div>
-    </body>>
+       
+    </body>
 </html>

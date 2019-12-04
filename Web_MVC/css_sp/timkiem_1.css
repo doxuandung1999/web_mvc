@@ -92,10 +92,10 @@ body {
     padding: 5px;
     height: 1000px;
     
-    background-color: white;
+    background-color: gainsboro;
 }
 .container h2 {
-    text-align: centers;
+    text-align: center;
 }
 #cv {
     width: 500px;
@@ -103,6 +103,7 @@ body {
 #vitrituyen {
     font-size: 25px;
     color: #000000;
+    font-weight: bold;
 }
 #quantam {
     width: 100px;

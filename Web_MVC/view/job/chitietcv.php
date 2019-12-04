@@ -21,17 +21,17 @@
                         </select>
                     </div>
                     <div class="col-sm-0" id="nhatuyendung">
-                        <a href="tuyendung.html">
+                        <a href="index.php?controller=job&action=dangtuyen">
                             <i class="fas fa-hand-holding-usd"></i>
                             Nhà tuyển dụng
                         </a>
                     </div>
                     <div class="col-sm-0" id="quantam">
-                        <a href="quantam.html">Quan tâm</a>
+                        <a href="index.php?controller=job&action=quantam">Quan tâm</a>
                     </div>
                     <div class="col"></div>
                     <div class="col-sm-0" id="logo">
-                        <a href="trangchu.php" style="color: #333; text-decoration: none;">
+                        <a href="index.php?controller=job&action=home" style="color: #333; text-decoration: none;">
                             <i class="fab fa-wordpress-simple"></i>
                             Tìm Việc Làm
                         </a>
@@ -41,10 +41,10 @@
                     <div class="col-sm-0" id="dangnhap">
                         <ul>
                             <li>
-                                <a href="dangnhap.html" id="sub_icon"><i class="far fa-user"></i>  <span>Lò Văn Chọi</span></a>
+                                <a href="#" id="sub_icon"><i class="far fa-user"></i>  <span><?php echo $hoTen ?></span></a>
                             </li>
                             <li id="dangxuat">
-                                <a href="dangnhap.html"><i class="fas fa-sign-out-alt"></i>  Đăng xuất</a>
+                                <a href="index.php?controller=job&action=chitietcv&ac=logout"><i class="fas fa-sign-out-alt"></i>  Đăng xuất</a>
                             </li>
                         </ul>
                     </div>
@@ -55,7 +55,7 @@
        <!-- banner -->
        <div class="banner">
             <div id="timkiem">
-                <a href="timkiem.php" name="timKiem" id="btsearch">Tìm Kiếm</a>
+                <a href="index.php?controller=job&action=timkiem" name="timKiem" id="btsearch">Tìm Kiếm</a>
             </div>
        </div>
 
@@ -63,47 +63,47 @@
        <div class="container noidung">
            <div class="row">
                <div class="col">
-                   <h1>Bán hàng <p>FPT</p></h1>
-                   <h4>Hạn nộp hồ sợ: <span>20/11/2019</span></h4>
+                   <h1><?php echo $array["viTriTuyenDung"];?> <p><?php echo $array["tenCty"]?></p></h1>
+                   <h4>Hạn nộp hồ sợ: <span><?php echo $array["hanNopHs"]?></span></h4>
                 </div>
            </div>
            <div class="row">
                 <div class="col">
-                    <h4>Mức lương: <span>1-2 triệu</span></h4>
-                    <h4>Số lượng: <span>5</span></h4>
-                    <h4>Ngành: <span>Kinh doanh</span></h4>
+                    <h4>Mức lương: <span><?php echo $array["luong"]?></span></h4>
+                    <h4>Số lượng: <span><?php echo $array["soLuong"]?></span></h4>
+                    <h4>Ngành: <span><?php echo $array["nganhTuyen"]?></span></h4>
                 </div>
                 <div class="col">
-                    <h4>Địa điểm làm việc: <span>Hà Nội</span></h4>
-                    <h4>Vị trí tuyển dụng: <span>Bán hàng</span></h4>
-                    <h4>Nơi nộp hồ sơ: <span>144-Xuân Thủy</span></h4>
+                    <h4>Địa điểm làm việc: <span><?php echo $array["khuVuc"]?></span></h4>
+                    <h4>Vị trí tuyển dụng: <span><?php echo $array["viTriTuyenDung"]?></span></h4>
+                    <h4>Nơi nộp hồ sơ: <span><?php echo $array["diaDiem"]?></span></h4>
                 </div>
            </div>
            <div class="row">
                <div class="col">
-                   <h4>Giới thiệu về công ty <p>FPT là một tập đoàn viễn thông lớn</p></h4>
+                   <h4>Giới thiệu về công ty <p> <?php echo $array["nhaTuyenDung"] ?></p></h4>
                </div>
            </div>
            <div class="row">
                <div class="col">
-                   <h4>Mô tả công việc <p>Tư vấn cho khách hàng</p></h4>
+                   <h4>Mô tả công việc <p><?php echo $array["moTaCongViec"] ?></p></h4>
                </div>
            </div>
            <div class="row">
                <div class="col">
-                   <h4>Yêu cầu công việc <p>Cần cù bù siêng năng</p></h4>
+                   <h4>Yêu cầu công việc <p> <?php echo $array["yeuCau"]?></p></h4>
                </div>
            </div>
            <div class="row">
                <div class="col">
-                   <h4>Quyền lợi <p>Bảo hiểm đầy đủ</p></h4>
+                   <h4>Quyền lợi <p><?php echo $array["quyenLoi"]?></p></h4>
                </div>
            </div>
            <div class="row">
                <div class="col">
                    <h4>Thông tin liên hệ</h4>
-                   <h5>Số điện thoại: <span>0368829272</span></h5>
-                   <h5>Email: <span>choilo@gmail.com</span></h5>
+                   <h5>Số điện thoại: <span><?php echo $array["sđt"]?></span></h5>
+                   <h5>Email: <span><?php echo $array["email"]?></span></h5>
                </div>
            </div>
        </div>

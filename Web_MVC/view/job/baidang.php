@@ -3,7 +3,7 @@
     <head>
         <title>Bài đã đăng</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="./css_sp/baidang.css" type="text/css">
+        <link rel="stylesheet" href="./css_sp/baidang_1.css" type="text/css">
         <link rel="stylesheet" type="text/css" href="./css_out/fontawesome-free-5.11.2-web/css/all.min.css"> 
         <link rel="stylesheet" type="text/css" href="./css_out/bootstrap.min.css"> 
     </head>
@@ -44,10 +44,10 @@
                     <div class="col-sm-0" id="dangnhap">
                         <ul>
                             <li>
-                                <a href="#" id="sub_icon"><i class="far fa-user"></i>  <span>Lò Văn Chọi</span></a>
+                                <a href="#" id="sub_icon"><i class="far fa-user"></i>  <span><?php echo $hoTen ?></span></a>
                             </li>
                             <li id="dangxuat">
-                                <a href="index.php?controller=actor&action=login"><i class="fas fa-sign-out-alt"></i>  Đăng xuất</a>
+                                <a href="index.php?controller=job&action=baidang&ac=logout"><i class="fas fa-sign-out-alt"></i>  Đăng xuất</a>
                             </li>
                         </ul>
                     </div>
@@ -76,20 +76,27 @@
                     </tr>
                 </thead>
                 <tbody>
+                             <?php
+                                while($array = $query->fetch_array()):
+                                
+                            ?>
                     <tr>
                         <td>
-                            <a href="chitietcv.html" id="vitrituyen">Vị trí tuyển dụng</a>
-                            <p>tên công ty</p>
+                            <a href="index.php?controller=job&action=chitietcv&chitiet=<?php echo $array["id_cv"]?>" id="vitrituyen"><?php echo $array["viTriTuyenDung"];?></a>
+                            <p><?php echo $array["tenCty"];?></p>
                         </td>
                         <td>
-                            <span><i class="fas fa-dollar-sign"></i>  12-20tr</span>
+                            <span><i class="fas fa-dollar-sign"></i>  <?php echo $array["luong"]; ?></span>
                         </td>
                         <td>
-                            <span><i class="fas fa-map-marker-alt"></i>  Hà Nội</span>
+                            <span><i class="fas fa-map-marker-alt"></i>  <?php echo $array["khuVuc"]; ?></span>
                         </td>
-                        <td><i class="far fa-clock"></i>  20/12/2019</td>
-                        <td><a href="#" style="color: black; font-size: 20px;"><i class="fas fa-trash"></i></a></td>
+                        <td><i class="far fa-clock"></i>  <?php echo $array["hanNopHs"]; ?></td>
+                        <td><a href="index.php?controller=job&action=baidang&delete=<?php echo $array["id_cv"];?>" style="color: black; font-size: 20px;"><i class="fas fa-trash"></i></a></td>
                     </tr>
+                            <?php
+                                endwhile;
+                            ?>
                 </tbody>
            </table>
        </div>

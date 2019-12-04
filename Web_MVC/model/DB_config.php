@@ -125,12 +125,79 @@
         public function checkCv($id_cv , $id_actor)
         {
             # code...
-            $sql = "select * from quantamcv where id_cv_quanTam = '$id_cv' and id_actor_quanTam = '$id_actor'";
+            $sql = "select count(id_cv_quanTam) as count from quantamcv where id_cv_quanTam = '$id_cv' and id_actor_quanTam = '$id_actor'";
             $this->execute($sql);
-            $num = $this->numRow();
-            return $num;
+            $data = $this->getData();
+            return $data;
         }
+        // lấy thông tin công việc quan tâm
+        public function selectJobQt($id_actor)
+        {
+            # code...
+            $sql = "select id_cv , viTriTuyenDung , tenCty , luong , khuVuc , hanNopHs from congviec cv 
+            LEFT JOIN quantamcv qt ON cv.id_cv = qt.id_cv_quanTam WHERE qt.id_actor_quanTam = '$id_actor' ";
+            return $this->execute($sql);
+        }
+        // xóa công việc quan tâm
+        public function deleteJobQt($id_cv)
+        {
+            # code...
+            $sql_qt = "delete from quanTamCv where id_cv_quanTam = '$id_cv'";
+            return $this->execute($sql_qt);
+        }
+        // hiện công việc đã đăng
+        public function selectCvActor($id_actor)
+        {
+            # code...
+            $sql = "select id_cv , id_actor, viTriTuyenDung , tenCty , luong , khuVuc , hanNopHs from congViec where id_actor='$id_actor' order by id_cv DESC ";
+            return $this->execute($sql);
+        }
+        // xóa công việc đã đăng
+        public function deleteJobActor($id_cv)
+        {
+            # code...
+            $sql = "delete from congviec where id_cv= '$id_cv'";
+            return $this->execute($sql);
+        }
+        // lấy toàn bộ dữ diệu trong bảng congviec
+        public function selectAllCv($id_cv)
+        {
+            # code...
+            $sql = "select * from congviec where id_cv = '$id_cv'";
+            $this->execute($sql);
+            $data = $this->getData();
+            return $data;
+        }
+        // tìm kiếm công việc
+        public function search($tencv , $nganh , $khuVuc)
+        {
+            # code...
+            $sql = "select * from congViec where viTriTuyenDung like '%$tencv%' and nganhTuyen ='$nganh' and khuVuc = '$khuVuc'";
+            return $this->execute($sql);
+
+        }
+        // hiện actor
+        public function actor()
+        {
+            # code...
+            $sql = "select * from actor where email != 'admin@gmail.com'  ";
+            return $this->execute($sql);
+        }
+        // xóa người dùng
+        public function deleteActor($id)
+        {
+            # code...
+            $sql = "delete from actor where id = '$id'";
+            return $this->execute($sql);
         
+        }
+        // xóa công việc
+        public function deleteJob($id_cv)
+        {
+            # code...
+            $sql = "delete from congviec where id_cv = '$id_cv'";
+            return $this->execute($sql);
+        }
     
         
 

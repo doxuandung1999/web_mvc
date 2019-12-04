@@ -39,7 +39,8 @@
                 $num = $db->loginAccept($email , $matkhau);
                 sleep(2);
                 if($email == "admin@gmail.com"){
-                    header('location:admin.php');
+                    header('location:index.php?controller=actor&action=admin');
+                    $_SESSION['admin'] = $email;
                 }
                 if($num >0 && $email != "admin@gmail.com"){
                     $_SESSION['daDangNhap'] = $email;
@@ -54,6 +55,42 @@
                 }
             }
             require_once('view/Actor/dangnhap.php');
+        break;
+        }
+        case 'admin':{
+            $email_dung = null;
+            if(isset($_SESSION['admin'])){
+                $email_dung = $_SESSION['admin'];
+            }
+            // lấy thông tin người dùng
+            $infor = $db->getActor($email_dung);
+            $id_actor = $infor["id"];
+            $hoTen = $infor["hoTen"];
+
+            $query =  $db->selectJob();
+            $query_s = $db->actor();
+
+            // xóa công việc 
+            if(isset($_GET['delete_1']) && !empty($_GET['delete_1'])){
+                $id_job = $_GET['delete_1'];
+                $db->deleteJobQt($id_cv);
+                $db->deleteJob($id_job);
+                header('location:index.php?controller=actor&action=admin');
+             }
+            
+             // xóa côngngười dùng 
+            if(isset($_GET['delete_s']) && !empty($_GET['delete_s'])){
+                $id = $_GET['delete_s'];
+                $db->deleteActor($id);
+                header('location:index.php?controller=actor&action=admin');
+             }
+              //đăng xuất
+          if(isset($_GET['ac']) && $_GET['ac']=='logout'){
+            unset($_SESSION['admin']);
+            header('location:index.php?controller=actor&action=login');
+          }
+            require_once('view/admin/admin.php');
+             
         break;
         }
     
